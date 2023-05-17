@@ -1,0 +1,10 @@
+{
+     "type": "record",
+     "namespace": "com.example",
+     "name": "Customer",
+     "version": "1",
+     "fields": [
+       { "name": "first_name", "type": "string", "doc": "First Name of Customer" },
+       { "name": "height", "type": ["null", "float"], "doc": "Height at the time of registration in cm" },
+       { "name": "weight", "type": "float", "doc": "Weight at the time of registration in kg" }]
+}
