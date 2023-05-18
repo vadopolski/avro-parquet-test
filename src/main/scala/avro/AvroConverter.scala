@@ -1,6 +1,6 @@
 package avro
 
-import example.Customer
+import com.example.Customer
 import org.apache.avro.Schema
 import org.apache.avro.file.DataFileWriter
 import org.apache.avro.generic.{GenericDatumWriter, GenericRecord}
@@ -14,14 +14,7 @@ object AvroConverter extends App {
 
   val configuration = new Configuration()
 
-  val customers: List[Customer] = List.fill(100) {
-    Customer.newBuilder()
-      .setFirstName("test")
-      .setLastName("test2")
-      .setHeight(2f)
-      .setWeight(3f)
-      .build()
-  }
+  val customers: List[Customer] = List.fill(100) (Customer("test", Option(2), 3f))
 
   customers.foreach(println)
 
