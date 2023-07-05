@@ -9,6 +9,7 @@ import org.apache.hadoop.fs.Path
 
 import java.io.File
 
+
 object AvroConverter extends App {
   val path = new Path("/test4/target.parquet")
 
